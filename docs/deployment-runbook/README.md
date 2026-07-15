@@ -113,13 +113,38 @@ npm run build
 
 ## 七、截图证据
 
-实际部署时补充以下截图，截图中不得包含 token、账号密码、验证码或 DNS 控制台秘密：
+2026-07-15 首次正式部署验收：
 
-1. `01-repository-ready.png`：独立仓库文件结构；
-2. `02-pages-workflow-green.png`：Pages 工作流成功；
-3. `03-custom-domain-https.png`：域名检查和 HTTPS；
-4. `04-home-desktop.png`：桌面首页；
-5. `05-pictidy-mobile.png`：手机 Pictidy 页面；
-6. `06-catchit-download.png`：CatchIt 下载验证。
+- 网站提交：`26e7fc9d0873efbf3068dd023be078ce03b770d0`；
+- CatchIt 清理提交：`4c0e9baccf8a306a00a11e63a53bb00b687de1a2`；
+- `vikigaplab.com` 与 `www.vikigaplab.com` 严格 TLS 校验通过，`www` 正确跳转到 apex；
+- 首页、Pictidy、CatchIt、隐私页、CSS、JavaScript、图片和视频均返回 HTTP 200；
+- `CatchIt-latest.zip` 为 1,410,891 字节，SHA-256 为 `cc1a96e4fe9d6f7558eddb499e75845f3bdcc1557a59fdf33a87bbc1e70aeea8`，ZIP 完整性检查通过。
 
-每次发布只保存必要的公开界面截图，并在本节记录日期、提交 SHA 和验证人。
+### 01. 独立仓库已就绪
+
+![独立 gaplab-website 仓库](screenshots/01-repository-ready.png)
+
+### 02. GitHub Pages 工作流成功
+
+![Pages 工作流成功](screenshots/02-pages-workflow-green.png)
+
+### 03. 自定义域名与证书激活
+
+![vikigaplab.com DNS 与 TLS](screenshots/03-custom-domain-https.png)
+
+截图时证书已显示 `3 of 3 / Certificate Active`；随后使用严格 TLS 客户端完成线上验证。
+
+### 04. GapLab 桌面首页
+
+![GapLab 桌面首页](screenshots/04-home-desktop.png)
+
+### 05. Pictidy 手机页面
+
+![Pictidy 手机页面](screenshots/05-pictidy-mobile.png)
+
+### 06. CatchIt 下载页面
+
+![CatchIt 下载页面](screenshots/06-catchit-download.png)
+
+截图中不得包含 token、账号密码、验证码或 DNS 控制台秘密。每次发布只保存必要的公开界面，并更新日期、提交 SHA 和验证结果。
