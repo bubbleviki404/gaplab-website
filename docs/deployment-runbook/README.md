@@ -133,7 +133,7 @@ npm run build
 
 ![vikigaplab.com DNS 与 TLS](screenshots/03-custom-domain-https.png)
 
-截图时证书已显示 `3 of 3 / Certificate Active`；随后使用严格 TLS 客户端完成线上验证。
+证书签发先完成 `3 of 3 / Certificate Active`，随后启用 `Enforce HTTPS`；截图保留最终启用状态，并使用严格 TLS 客户端完成线上验证。
 
 ### 04. GapLab 桌面首页
 
