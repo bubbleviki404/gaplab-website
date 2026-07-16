@@ -104,6 +104,9 @@ html[data-lang="en"] .langEn { display: inline !important; }
 /* CatchIt product poster */
 .catchitPage { overflow: hidden; }
 .catchitHero { min-height: 760px; display: grid; grid-template-columns: 1.05fr .95fr; gap: 50px; align-items: center; padding-block: 78px; }
+.catchitIdentity { display: flex; align-items: center; gap: 18px; margin-bottom: 26px; }
+.catchitIdentity .productKicker { margin: 0; }
+.catchitMark { flex: 0 0 auto; width: 96px; height: 96px; border: 1px solid var(--line); border-radius: 24px; background: #fff; box-shadow: 0 18px 36px rgba(20, 32, 26, .13); transform: rotate(-3deg); }
 .productKicker { margin: 0 0 18px; font-size: 11px; font-weight: 750; letter-spacing: .08em; text-transform: uppercase; }
 .productKicker span { display: inline-block; width: 9px; height: 9px; margin-right: 9px; border-radius: 50%; background: #18a865; }
 .catchitIntro h1 { margin: 0; color: var(--cobalt); font-family: var(--display); font-size: clamp(94px, 12vw, 168px); line-height: .72; letter-spacing: -.08em; }
@@ -304,6 +307,7 @@ kbd { padding: 7px 9px; border: 1px solid color-mix(in srgb, var(--paper) 45%, t
   .siteFooter p, .productFooter p { display: none; }
   .siteFooter > div:last-child a:first-child { display: none; }
   .catchitHero { padding-block: 60px; }
+  .catchitMark { width: 76px; height: 76px; border-radius: 19px; }
   .catchitIntro h1 { font-size: 92px; }
   .catchitIntro h2 { margin-top: 42px; }
   .productActions { align-items: flex-start; flex-direction: column; }

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { Lang } from "../../components/Lang";
 import { SiteNav } from "../../components/SiteNav";
@@ -44,7 +45,10 @@ export default function CatchItPage() {
 
       <section className="catchitHero pageShell">
         <div className="catchitIntro">
-          <p className="productKicker"><span /> macOS 13+ · Apple Silicon + Intel</p>
+          <div className="catchitIdentity">
+            <Image className="catchitMark" src="/catchit-icon.png" alt="CatchIt" width={96} height={96} priority />
+            <p className="productKicker"><span /> macOS 13+ · Apple Silicon + Intel</p>
+          </div>
           <h1>Catch<span>It</span></h1>
           <h2><Lang zh={<>截图之后，<br />重点已经在图上。</>} en={<>Capture it.<br />Make the point.</>} /></h2>
           <p className="productLead"><Lang

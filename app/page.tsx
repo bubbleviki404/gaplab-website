@@ -33,7 +33,7 @@ export default function LabHome() {
 
         <Link className="projectPoster" href="/apps/catchit/">
           <span className="projectNumber">01</span>
-          <div className="projectIconWrap"><Image src="/catchit-icon.svg" alt="CatchIt" width={132} height={132} priority /></div>
+          <div className="projectIconWrap"><Image src="/catchit-icon.png" alt="CatchIt" width={132} height={132} priority /></div>
           <div className="projectCopy">
             <p><span className="statusDot" /> macOS · Open source · v0.4.1</p>
             <h2>CatchIt</h2>
