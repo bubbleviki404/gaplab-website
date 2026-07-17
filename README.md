@@ -10,6 +10,7 @@ GapLab 的中英双语品牌官网。GapLab 是一个从真实生活中的细小
 - Pictidy 产品介绍：`/apps/pictidy/`
 - CatchIt 产品与下载：`/apps/catchit/`
 - CatchIt 隐私说明：`/apps/catchit/privacy/`
+- Font Card 可商用字体卡片工作室：`/apps/fontcard/`
 
 网站支持中文与英文切换，并针对桌面和手机布局进行响应式适配。
 
@@ -20,6 +21,7 @@ npm ci
 npm run dev
 ```
 
+本地用 `127.0.0.1` 打开时，中文字体经 `middleware.ts` 代理 ZeoSeven（该 Origin 会被防盗链拦截）。生产域名可直连 FontsAPI；`npm run build` 仍生成 GitHub Pages 静态 `out/`。
 构建校验：
 
 ```bash

@@ -73,6 +73,9 @@ html[data-lang="en"] .langEn { display: inline !important; }
 .projectPosterPictidy::before { background: #eee9ff; }
 .projectPosterPictidy .projectIconWrap img { border: 1px solid var(--line); background: #fff; }
 .projectBadgeStore { color: var(--ink); background: var(--lime); transform: rotate(3deg); }
+.projectPosterFontcard::before { background: #ddd8f5; }
+.projectPosterFontcard .projectIconWrap img { border: 1px solid var(--line); background: #fff; }
+.projectBadgeFontcard { color: var(--paper); background: #e63500; transform: rotate(-2deg); }
 .projectArrow { font-family: var(--display); font-size: 48px; }
 .nextExperiment { display: flex; align-items: center; gap: 22px; padding: 30px 0; color: color-mix(in srgb, var(--ink) 58%, transparent); border-bottom: 1px solid var(--line); }
 .nextExperiment .spark { color: var(--coral); font-size: 22px; }

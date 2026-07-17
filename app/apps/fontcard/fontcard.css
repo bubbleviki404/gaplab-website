@@ -1,0 +1,587 @@
+/* Font Card studio — scoped so GapLab site chrome is unaffected */
+.fontcard-root {
+  /* Text = dark for readability; orange only for accent */
+  --fc-bg: #d9d6ef;
+  --fc-bg-deep: #cdc8e8;
+  --fc-text: #1c1524;
+  --fc-text-soft: rgba(28, 21, 36, 0.62);
+  --fc-accent: #e63500;
+  --fc-accent-deep: #c92e00;
+  --fc-line: rgba(28, 21, 36, 0.22);
+  --fc-line-strong: rgba(28, 21, 36, 0.55);
+  --fc-panel: rgba(255, 255, 255, 0.42);
+  --fc-surface: #f4f3fb;
+  --fc-shadow: 0 18px 40px rgba(20, 18, 40, 0.14), 0 4px 12px rgba(20, 18, 40, 0.08);
+  --fc-ui: "Archivo", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --fc-display: "Archivo Black", "Archivo", sans-serif;
+  position: relative;
+  min-height: 100vh;
+  min-height: 100dvh;
+  padding: 20px clamp(16px, 3vw, 40px) 48px;
+  color: var(--fc-text);
+  font-family: var(--fc-ui);
+  background: linear-gradient(180deg, #e4e1f5 0%, var(--fc-bg) 42%, var(--fc-bg-deep) 100%);
+  overflow: hidden;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+.fontcardPage {
+  margin: 0;
+  min-height: 100vh;
+  min-height: 100dvh;
+  background: var(--fc-bg, #d9d6ef);
+}
+
+.fontcard-back {
+  position: relative;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  min-height: 36px;
+  margin-bottom: 14px;
+  color: var(--fc-text-soft);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.fontcard-back:hover {
+  color: var(--fc-accent);
+}
+
+.fontcard-root *,
+.fontcard-root *::before,
+.fontcard-root *::after {
+  box-sizing: border-box;
+}
+
+.fontcard-root button,
+.fontcard-root textarea {
+  font: inherit;
+}
+
+.fontcard-root :focus-visible {
+  outline: 3px solid var(--fc-accent);
+  outline-offset: 3px;
+}
+
+.fontcard-atmosphere {
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(28, 21, 36, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(28, 21, 36, 0.04) 1px, transparent 1px);
+  background-size: 56px 56px;
+  opacity: 0.55;
+}
+
+.fontcard-topbar {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 28px;
+}
+
+.fontcard-brand {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  max-width: 520px;
+}
+
+.fontcard-brand-mark {
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  border: 2px solid var(--fc-accent);
+  background: transparent;
+  font-family: var(--fc-display);
+  font-size: 22px;
+  line-height: 1;
+  color: var(--fc-accent);
+  flex-shrink: 0;
+}
+
+.fontcard-brand h1 {
+  margin: 0;
+  font-family: var(--fc-display);
+  font-size: clamp(26px, 3.6vw, 38px);
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  line-height: 0.95;
+  text-transform: uppercase;
+  color: var(--fc-accent);
+}
+
+.fontcard-brand p {
+  margin: 8px 0 0;
+  color: var(--fc-text-soft);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.fontcard-tabs {
+  display: inline-flex;
+  border: 2px solid var(--fc-line-strong);
+  background: transparent;
+}
+
+.fontcard-tabs button {
+  appearance: none;
+  border: 0;
+  background: transparent;
+  min-height: 44px;
+  padding: 0 22px;
+  color: var(--fc-text);
+  cursor: pointer;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+.fontcard-tabs button.active {
+  background: var(--fc-accent);
+  color: #fff8f4;
+}
+
+.fontcard-workspace {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: minmax(260px, 320px) minmax(0, 1fr);
+  gap: 24px;
+  align-items: start;
+}
+
+.fontcard-font-panel,
+.fontcard-controls {
+  border: 2px solid var(--fc-line-strong);
+  background: var(--fc-panel);
+}
+
+.fontcard-font-panel {
+  padding: 16px 12px 14px;
+  max-height: calc(100vh - 180px);
+  display: flex;
+  flex-direction: column;
+}
+
+.fontcard-panel-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 0 8px 12px;
+  border-bottom: 2px solid var(--fc-line-strong);
+}
+
+.fontcard-panel-head h2 {
+  margin: 0;
+  font-family: var(--fc-display);
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--fc-text);
+}
+
+.fontcard-panel-head span {
+  color: var(--fc-text-soft);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.fontcard-font-list {
+  list-style: none;
+  margin: 12px 0 0;
+  padding: 0;
+  overflow: auto;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.fontcard-font-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 6px;
+  align-items: stretch;
+}
+
+.fontcard-font-item {
+  width: 100%;
+  text-align: left;
+  border: 2px solid transparent;
+  background: transparent;
+  padding: 12px 10px;
+  min-height: 44px;
+  cursor: pointer;
+  display: grid;
+  gap: 3px;
+  color: var(--fc-text);
+}
+
+.fontcard-font-item:hover {
+  background: rgba(255, 255, 255, 0.4);
+  border-color: var(--fc-line);
+}
+
+.fontcard-font-item.active {
+  background: var(--fc-surface);
+  border-color: var(--fc-accent);
+}
+
+.fontcard-font-dl {
+  appearance: none;
+  align-self: center;
+  border: 2px solid var(--fc-line-strong);
+  background: transparent;
+  color: var(--fc-text);
+  min-height: 44px;
+  padding: 0 12px;
+  cursor: pointer;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+}
+
+.fontcard-font-dl:hover:not(:disabled) {
+  background: var(--fc-accent);
+  border-color: var(--fc-accent);
+  color: #fff8f4;
+}
+
+.fontcard-font-dl:disabled {
+  opacity: 0.5;
+  cursor: wait;
+}
+
+.fontcard-font-item-name {
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.fontcard-font-item-desc,
+.fontcard-font-item-license {
+  color: var(--fc-text-soft);
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.fontcard-preview-panel {
+  display: grid;
+  grid-template-columns: minmax(240px, 300px) minmax(0, 1fr);
+  gap: 20px;
+  align-items: start;
+}
+
+.fontcard-controls {
+  padding: 18px;
+  display: grid;
+  gap: 18px;
+}
+
+.fontcard-field {
+  display: grid;
+  gap: 8px;
+}
+
+.fontcard-field > span {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--fc-text);
+}
+
+.fontcard-field textarea {
+  width: 100%;
+  resize: vertical;
+  min-height: 96px;
+  border: 2px solid var(--fc-line-strong);
+  background: var(--fc-surface);
+  padding: 12px;
+  color: var(--fc-text);
+  outline: none;
+  font-weight: 600;
+}
+
+.fontcard-field textarea:focus {
+  box-shadow: 0 0 0 3px rgba(230, 53, 0, 0.2);
+}
+
+.fontcard-swatch-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.fontcard-swatch {
+  width: 48px;
+  min-height: 48px;
+  border: 2px solid var(--fc-line);
+  border-radius: 0;
+  cursor: pointer;
+  padding: 0;
+  display: grid;
+  grid-template-rows: 28px auto;
+  overflow: hidden;
+  background: transparent;
+}
+
+.fontcard-swatch-chip {
+  display: block;
+  width: 100%;
+  height: 28px;
+}
+
+.fontcard-swatch-label {
+  display: block;
+  padding: 3px 2px;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: var(--fc-text);
+  background: var(--fc-surface);
+  line-height: 1.2;
+  text-align: center;
+}
+
+.fontcard-swatch.active {
+  border-color: var(--fc-accent);
+  box-shadow: 0 0 0 2px rgba(230, 53, 0, 0.25);
+}
+
+.fontcard-color-readout {
+  margin: 0;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--fc-text-soft);
+  letter-spacing: 0.02em;
+}
+
+.fontcard-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.fontcard-btn {
+  appearance: none;
+  border: 2px solid var(--fc-line-strong);
+  min-height: 48px;
+  padding: 12px 14px;
+  cursor: pointer;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+.fontcard-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.fontcard-btn.primary {
+  background: var(--fc-accent);
+  border-color: var(--fc-accent);
+  color: #fff8f4;
+}
+
+.fontcard-btn.primary:hover:not(:disabled) {
+  background: var(--fc-accent-deep);
+}
+
+.fontcard-btn.ghost {
+  background: transparent;
+  color: var(--fc-text);
+}
+
+.fontcard-btn.ghost:hover:not(:disabled) {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.fontcard-feedback {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.fontcard-feedback.ok {
+  color: var(--fc-accent-deep);
+}
+
+.fontcard-feedback.err {
+  color: #9b1c00;
+}
+
+.fontcard-stage {
+  display: grid;
+  justify-items: center;
+  gap: 14px;
+  padding: 12px 4px;
+  min-height: 400px;
+  perspective: 1200px;
+}
+
+.fontcard-card {
+  position: relative;
+  width: min(100%, 560px);
+  aspect-ratio: 3 / 2;
+  display: grid;
+  place-items: center;
+  padding: clamp(24px, 5vw, 48px);
+  box-shadow: var(--fc-shadow);
+  overflow: hidden;
+  border: 1px solid rgba(20, 18, 40, 0.08);
+  will-change: transform, box-shadow;
+}
+
+.fontcard-card-grain {
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.55'/%3E%3C/svg%3E");
+  opacity: 0.12;
+  mix-blend-mode: multiply;
+  pointer-events: none;
+}
+
+.fontcard-card.dark .fontcard-card-grain {
+  mix-blend-mode: screen;
+  opacity: 0.2;
+}
+
+.fontcard-card-text {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  max-width: 90%;
+  text-align: center;
+  font-size: clamp(28px, 5.2vw, 56px);
+  line-height: 1.25;
+  letter-spacing: 0.04em;
+  opacity: 0.35;
+  transition: opacity 0.35s ease;
+  word-break: break-word;
+}
+
+.fontcard-card-text.ready {
+  opacity: 1;
+}
+
+.fontcard-card-text.loading {
+  opacity: 0.45;
+}
+
+.fontcard-card-meta {
+  position: absolute;
+  left: 18px;
+  right: 18px;
+  bottom: 14px;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  opacity: 0.78;
+}
+
+.fontcard-card-meta > span:first-child {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.fontcard-card-meta > span:last-child {
+  text-transform: none;
+  font-weight: 600;
+}
+
+.fontcard-stage-hint {
+  margin: 0;
+  color: var(--fc-text-soft);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.fontcard-mobile-dock {
+  display: none;
+}
+
+@media (max-width: 980px) {
+  .fontcard-workspace,
+  .fontcard-preview-panel {
+    grid-template-columns: 1fr;
+  }
+
+  .fontcard-preview-panel {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .fontcard-stage {
+    order: -1;
+    min-height: auto;
+  }
+
+  .fontcard-font-panel {
+    max-height: 280px;
+    order: 2;
+  }
+
+  .fontcard-controls {
+    order: 1;
+  }
+
+  .fontcard-mobile-dock {
+    display: grid;
+    position: sticky;
+    bottom: 12px;
+    z-index: 5;
+    gap: 8px;
+    padding: 12px;
+    border: 2px solid var(--fc-line-strong);
+    background: color-mix(in srgb, var(--fc-surface) 92%, transparent);
+    backdrop-filter: blur(8px);
+  }
+
+  .fontcard-actions-desktop {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .fontcard-topbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .fontcard-actions,
+  .fontcard-mobile-dock {
+    grid-template-columns: 1fr;
+  }
+
+  .fontcard-card {
+    width: 100%;
+  }
+}

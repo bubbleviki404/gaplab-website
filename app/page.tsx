@@ -28,7 +28,7 @@ export default function LabHome() {
       <section className="projectIndex pageShell" id="projects" aria-labelledby="projects-title">
         <header className="indexHeader">
           <p id="projects-title"><Lang zh="已发布项目" en="Released projects" /></p>
-          <span>02 / growing</span>
+          <span>03 / growing</span>
         </header>
 
         <Link className="projectPoster" href="/apps/catchit/">
@@ -55,10 +55,22 @@ export default function LabHome() {
           <span className="projectArrow" aria-hidden="true">↗</span>
         </Link>
 
+        <Link className="projectPoster projectPosterFontcard" href="/apps/fontcard/">
+          <span className="projectNumber">03</span>
+          <div className="projectIconWrap"><Image src="/fontcard-icon.png" alt="Font Card" width={132} height={132} /></div>
+          <div className="projectCopy">
+            <p><span className="statusDot" /> Web · Free commercial fonts</p>
+            <h2>Font Card</h2>
+            <span><Lang zh="挑可商用字体，做成一张能带走的卡片。" en="Pick a free commercial font, make a card you can take away." /></span>
+          </div>
+          <div className="projectBadge projectBadgeFontcard"><Lang zh="现在可用" en="Available now" /></div>
+          <span className="projectArrow" aria-hidden="true">↗</span>
+        </Link>
+
         <div className="nextExperiment">
           <Spark />
           <p><Lang zh="下一项实验正在形成。" en="The next experiment is taking shape." /></p>
-          <span>03 / ???</span>
+          <span>04 / ???</span>
         </div>
       </section>
 

@@ -7,7 +7,7 @@
   },
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "NEXT_OUTPUT=export next build",
     "start": "next start",
     "test": "npm run build",
     "lint": "eslint . --ignore-pattern .next --ignore-pattern out --ignore-pattern dist"
@@ -15,6 +15,7 @@
   "dependencies": {
     "@fontsource-variable/bodoni-moda": "5.2.7",
     "@fontsource-variable/bricolage-grotesque": "5.2.10",
+    "gsap": "^3.15.0",
     "next": "16.2.6",
     "react": "19.2.6",
     "react-dom": "19.2.6"
