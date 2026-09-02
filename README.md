@@ -6,7 +6,8 @@ GapLab 的中英双语品牌官网。GapLab 是一个从真实生活中的细小
 
 ## 页面
 
-- GapLab 品牌与作品集：`/`
+- GapLab 品牌首屏：`/`
+- Viki 个人作品集：`/portfolio/`
 - Pictidy 产品介绍：`/apps/pictidy/`
 - CatchIt 产品与下载：`/apps/catchit/`
 - CatchIt 隐私说明：`/apps/catchit/privacy/`

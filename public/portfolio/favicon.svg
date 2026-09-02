@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Viki">
+  <rect width="64" height="64" rx="16" fill="#f6f4f1"/>
+  <path d="M14 14h10l8 28 8-28h10L38 52H26L14 14Z" fill="#343434"/>
+  <circle cx="50" cy="14" r="6" fill="#ff7eb3"/>
+  <circle cx="14" cy="50" r="4" fill="#4c8dff"/>
+  <circle cx="50" cy="50" r="4" fill="#ffe15a"/>
+</svg>

@@ -8,7 +8,7 @@ export const metadata: Metadata = { title: "CatchIt Privacy" };
 export default function PrivacyPage() {
   return (
     <main className="legalPage">
-      <SiteNav current="catchit" />
+      <SiteNav />
       <article className="legal pageShell">
         <p className="legalKicker"><Lang zh="最后更新：2026-07-14" en="Last updated: July 14, 2026" /></p>
         <h1><Lang zh="隐私说明" en="Privacy" /></h1>

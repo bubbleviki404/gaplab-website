@@ -41,7 +41,7 @@ const features = [
 export default function CatchItPage() {
   return (
     <main className="catchitPage">
-      <SiteNav current="catchit" />
+      <SiteNav />
 
       <section className="catchitHero pageShell">
         <div className="catchitIntro">

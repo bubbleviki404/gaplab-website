@@ -39,7 +39,7 @@ const steps = [
 export default function PictidyPage() {
   return (
     <main className="pictidyPage">
-      <SiteNav current="pictidy" />
+      <SiteNav />
 
       <section className="pictidyHero pageShell">
         <div className="pictidyIntro">

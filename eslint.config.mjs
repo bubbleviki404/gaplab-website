@@ -12,6 +12,8 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // The portfolio is a self-contained static page with vendored browser scripts.
+    "public/portfolio/**",
   ]),
 ]);
 
