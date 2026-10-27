@@ -1,16 +1,34 @@
 # GapLab Website
 
-GapLab 的中英双语品牌官网。GapLab 是一个从真实生活中的细小痛点出发，用简单、有温度的产品减少生活与创作摩擦的一人产品实验室。
+[简体中文](README.zh-CN.md)
 
-线上地址：<https://vikigaplab.com>
+GapLab’s bilingual public website presents a one-person product studio, its apps, and Viki’s portfolio. The studio builds small tools to reduce friction in everyday life and creative work.
 
-## 页面
+Live website: <https://vikigaplab.com>
 
-- GapLab 品牌首屏：`/`
-- Viki 个人作品集：`/portfolio/`
-- Pictidy 产品介绍：`/apps/pictidy/`
-- CatchIt 产品与下载：`/apps/catchit/`
-- CatchIt 隐私说明：`/apps/catchit/privacy/`
-- Font Card 可商用字体卡片工作室：`/apps/fontcard/`
+## Pages and architecture
 
-网站支持中文与英文切换，并针对桌面和手机布局进行响应式适配。
+- `/`: GapLab home
+- `/portfolio/`: Viki’s self-contained HTML/CSS/JavaScript portfolio, served from `public/portfolio/`
+- `/apps/pictidy/`: Pictidy product page
+- `/apps/catchit/` and `/apps/catchit/privacy/`: CatchIt product and privacy pages
+- `/apps/fontcard/`: Font Card typography studio
+
+The site uses Next.js with a static export. It supports Chinese and English and responsive desktop/mobile layouts. The portfolio labels Video Learning Moments as in development; its presentation does not imply a released product.
+
+## Local development and deployment
+
+Use Node.js 22.13 or later:
+
+```sh
+npm ci
+npm run dev
+```
+
+`npm run lint` checks application code; `npm run build` exports the website to `out/`. The portfolio’s static browser scripts are excluded from the application ESLint configuration and can be checked with `node --check public/portfolio/script.js`.
+
+Pushing to `main` runs the existing GitHub Actions workflow: install dependencies, lint, build, and deploy `out/` to GitHub Pages. `public/CNAME` preserves the custom domain. This is a static website; server middleware is not included in the Pages export. Font Card’s same-origin font proxy requires separate hosting as described in `next.config.ts`.
+
+## Privacy and rights
+
+The portfolio stores its language preference in the browser. External app-store, music, and GitHub links lead to services with their own policies. Source code is provided under [MIT](LICENSE). Brand images, screenshots, audio, video, and third-party fonts or libraries retain their respective ownership and license terms; the source-code license does not grant blanket reuse rights to those assets.

@@ -1,6 +1,19 @@
 const COPY = {
   zh: {
     skip: "跳到主要内容",
+    menuOpen: "菜单",
+    menuClose: "关闭菜单",
+    featuredProject: "主推项目",
+    workflowStep1: "定义问题与 MVP",
+    workflowStep2: "实现并验证核心体验",
+    workflowStep3: "发布后持续观察",
+    workflowStep4: "复用稳定的方法",
+    diagramHint: "展开完整开发流程图",
+    audioError: "播放失败，请重试。",
+    githubNextStep: "继续看我的代码与项目 ↗",
+    otherProjectsLabel: "其他项目",
+    workflowOverviewLabel: "开发工作流概览",
+    workflowDiagramLabel: "可滚动查看完整工作流图",
     navProjects: "项目",
     navProcess: "怎么做",
     navWorkflow: "AI 工作流",
@@ -24,13 +37,16 @@ const COPY = {
     projectsLead: "有些已经发布，有些还在继续做。比起堆功能，我更想先讲清楚：它为什么会出现。",
     releasedProductsLabel: "已发布产品",
     vlmMeta: "AI 应用 · macOS",
+    vlmCaption: "视频、学习瞬间与 AI 追问，在同一个界面。",
+    vlmProblemTitle: "从学习中的一次打断出发",
+    vlmApproachTitle: "让回答回到视频上下文",
     statusDevelopment: "开发中",
     statusReleased: "已发布",
     statusValidated: "已验证 / 持续开发",
     statusFunctional: "功能可用",
     browserFunctional: "浏览器扩展 · 功能可用",
     vlmCopy: "看学习视频时，暂停、截图、切到 AI、再重新解释上下文，会不断打断学习节奏。我想让 AI 直接理解当前时间点、画面、字幕和上下文，在视频里完成解释与追问。",
-    vlmTag: "当前主要 AI 项目 · Context / RAG / Eval",
+    vlmTag: "<span class=\"project-context-label\">实现思路：</span>通过 <strong>RAG 将 AI 问答与视频内容连接起来</strong>，让每一次解释都能参考相关的视频片段与当前学习上下文，而不只是依赖模型的通用知识。",
     vlmThesis: "少一次切换，<br>多留一点专注。",
     picpopMeta: "iOS · 创作者工具",
     picpopCopy: "重复做快切 / 拼贴片头很费时间，所以我把这件事压缩成一个更轻、更直接的创作流程。",
@@ -47,7 +63,7 @@ const COPY = {
     holdTag: "来自真实 AI 对话习惯",
     heicCopy: "让 Live Photo / HEIC 在网页上传时自动转换为兼容格式，不打断原本的上传流程。",
     processLabel: "我的方法",
-    processTitle: "从一个小问题，到一个真的东西。",
+    processTitle: "<span>从一个小问题，</span><span>到一个真的东西。</span>",
     processLead: "我更习惯先从真实问题开始，把核心体验想清楚，再决定怎么做、用什么技术，以及哪些部分值得交给 AI。",
     observeTitle: "先观察",
     observeCopy: "先看真实使用里哪里反复卡住、哪里让人烦、哪里已经被默认忍受。很多项目都从这种很小的摩擦开始。",
@@ -58,21 +74,20 @@ const COPY = {
     makeTitle: "把它做出来",
     makeCopy: "把核心体验做成真实闭环。产品、架构和设计由我做关键判断，实现和重复执行尽量交给 Agent。",
     makeQuote: "人做判断，Agent 做执行。",
-    iterateTitle: "真实使用，再迭代",
+    iterateTitle: "<span>真实使用，</span><br><span>再迭代</span>",
     iterateCopy: "先进入真实使用，再根据反馈、测试和独立验证继续调整。代码写完不等于产品已经可信。",
     iterateQuote: "完成不等于证据。",
     workflowLabel: "AI 如何进入我的工作流",
-    workflowTitle: "AI 怎么进入我的工作和日常。",
+    workflowTitle: "<span>AI 怎么进入</span><span>我的工作和日常。</span>",
     workflowLead: "我更喜欢从真实使用开始：先看哪里重复、哪里卡住，再决定 AI 到底应该帮我做哪一部分。",
     developmentLabel: "01 · 产品开发",
-    developmentTitle: "AI 辅助开发工作流",
+    developmentTitle: "<span>AI 辅助开发</span><span>工作流</span>",
     developmentCopy1: "做了几个真实 App 之后，我慢慢形成了一套更适合自己的 Human + Agent 开发方式：我负责产品、架构、设计和关键判断，Agent 负责实现、检查、测试与重复执行。",
     developmentCopy2: "后来，我又把其中稳定、反复使用的部分整理成 App Development Skills。",
     skillsLink: "在 GitHub 查看 App Development Skills ↗",
-    diagramHint: "左右滑动查看完整流程 ↔",
     ideaCaseLabel: "02 · 个人日常",
     ideaSummary: "用飞书妙记快速留下突然出现的想法，再让 AI 帮我整理、重新看见和继续讨论。",
-    ideaTitle: "飞书灵感收件箱",
+    ideaTitle: "<span>飞书</span><span>灵感收件箱</span>",
     ideaWhatLabel: "是什么",
     ideaWhat: "一个基于飞书妙记的个人灵感工作流：语音记录、轻整理 / 结构化整理、思维导图、AI Take 和周期性回顾。",
     ideaPainLabel: "痛点",
@@ -80,7 +95,7 @@ const COPY = {
     ideaSolutionLabel: "怎么解决",
     ideaSolution: "复用飞书成熟的语音转写，把原始表达、轻整理和 AI 解读分开，再通过周期性回顾让旧想法重新浮现。",
     creativeLabel: "AI 创作实践",
-    creativeTitle: "除了工作流，<br>我也会用 AI 做音乐和影像。",
+    creativeTitle: "<span>除了工作流，</span><br><span>我也会用 AI</span><span>做音乐和影像。</span>",
     creativeLead: "这里放的是我真实做过的 AI 创作实践：音乐和视频。它们也是我理解 AI 能力边界的另一种方式。",
     musicLabel: "AI 音乐 · viki006",
     musicCopy: "ChatGPT 协助风格分析、歌词和曲风迭代，Suno 负责音乐生成与版本尝试，最终通过 Amuse 完成发行。右侧可以直接试听真实音频片段。",
@@ -88,18 +103,19 @@ const COPY = {
     trackMeta: "viki006 · 30 秒试听",
     artistHomepages: "音乐主页",
     videoLabel: "AI 视频",
-    videoTitle: "AI 也进入了我的视频创作。",
+    videoTitle: "<span>AI 也进入了</span><span>我的视频</span><span>创作。</span>",
     videoCopy: "我实际用过角色 / 人设、分镜、Prompt、Flow 等视频生成方式，也尝试过 AI 辅助剪辑。更重要的是在真实制作里持续判断：哪些环节交给 AI 更合适，哪些时候自己做反而更快。",
     videoFallback: "你的浏览器无法播放这个视频。",
     aboutLabel: "关于我",
-    aboutTitle: "产品思维的<br>工程师与创作者。",
+    aboutTitle: "<span>产品思维的</span><br><span>工程师</span><span>与创作者。</span>",
     aboutCopy1: "我有多年软件工程背景，但我越来越确定，自己真正擅长、也最有兴趣的，不只是“把需求写成代码”，而是发现问题、判断什么值得做、把体验变简单，再把它真正做出来。",
     aboutCopy2: "现在 AI 也正在成为我制作东西的一部分：有些项目本身真的需要 AI，例如 Video Learning Moments；另一些时候，Agent 更像开发伙伴，帮助我更快地研究、实现、测试和验证。我更关心它什么时候真的有价值，而不是把每个产品都变成“AI 产品”。",
     aboutCopy3: "软件之外，我也会继续做音乐、视频和其他创作。对我来说，它们不是另一套身份，而是同一种观察、判断和制作方式在不同媒介里的延伸。",
-    manifesto: "我会留意，也会动手做。",
+    manifesto: "<span>我会留意，</span><span>也会动手做。</span>",
     secondarySkills: "补充技能",
     backTop: "回到顶部 ↑",
     footerBig: "产品 × AI × 创作",
+    vlmScreenshotAlt: "Video Learning Moments 视频学习界面，展示学习瞬间与 AI 追问",
     ideaAlt: "飞书灵感收件箱 Recent Ideas 页面，展示最近九条灵感记录",
     picpopDeviceAlt: "PicPop 在手机上的真实产品预览",
     pictidyDeviceAlt: "Pictidy 在手机上的真实产品预览",
@@ -107,6 +123,19 @@ const COPY = {
   },
   en: {
     skip: "Skip to main content",
+    menuOpen: "Menu",
+    menuClose: "Close menu",
+    featuredProject: "Featured project",
+    workflowStep1: "Define the problem and MVP",
+    workflowStep2: "Build and verify the core experience",
+    workflowStep3: "Observe after release",
+    workflowStep4: "Reuse what proves stable",
+    diagramHint: "Expand the full development workflow",
+    audioError: "Playback failed. Try again.",
+    githubNextStep: "Explore my code and projects ↗",
+    otherProjectsLabel: "Other projects",
+    workflowOverviewLabel: "Development workflow overview",
+    workflowDiagramLabel: "Scrollable full workflow diagram",
     navProjects: "Projects",
     navProcess: "How I work",
     navWorkflow: "AI in my workflow",
@@ -135,8 +164,11 @@ const COPY = {
     statusFunctional: "Functional",
     browserFunctional: "Browser Extension · Functional",
     vlmMeta: "AI Application · macOS",
+    vlmCaption: "Video, learning moments, and AI follow-ups in one place.",
+    vlmProblemTitle: "A break in the learning flow",
+    vlmApproachTitle: "Grounding answers in the video",
     vlmCopy: "While learning from videos, pausing, taking screenshots, switching to AI, and re-explaining context keeps breaking the flow. I want AI to understand the current moment, frame, subtitles, and context so explanations and follow-up questions can happen without leaving the video.",
-    vlmTag: "Current core AI product · Context / RAG / Eval",
+    vlmTag: "<span class=\"project-context-label\">Approach: </span>Use <strong>RAG to connect AI Q&amp;A with video content</strong>, so each explanation can draw on relevant video segments and the current learning context, rather than relying only on the model’s general knowledge.",
     vlmThesis: "Less switching. <br>More attention left for learning.",
     picpopMeta: "iOS · Creator Tool",
     picpopCopy: "Recreating quick-cut collage intros over and over was tedious, so I turned it into a lighter, more direct creation flow.",
@@ -153,7 +185,7 @@ const COPY = {
     holdTag: "Built from a real AI conversation habit",
     heicCopy: "Converts Live Photo / HEIC uploads into a compatible format without interrupting the original web upload flow.",
     processLabel: "How I work",
-    processTitle: "From a small problem to something real.",
+    processTitle: "<span>From a small problem</span> <span>to something real.</span>",
     processLead: "I prefer to start with a real problem, clarify the core experience, then decide how to build it, what technology to use, and which parts are worth handing to AI.",
     observeTitle: "Observe first",
     observeCopy: "Notice where real use repeatedly gets stuck, feels annoying, or has simply been tolerated. Many of my projects start with these small frictions.",
@@ -164,20 +196,19 @@ const COPY = {
     makeTitle: "Make it real",
     makeCopy: "Turn the core experience into a real working loop. I keep the key product, architecture, and design decisions, while agents handle implementation and repetitive execution.",
     makeQuote: "Human judgment, agent execution.",
-    iterateTitle: "Use, verify, iterate",
+    iterateTitle: "<span>Use, verify,</span><span> iterate</span>",
     iterateCopy: "Get it into real use, then keep adjusting through feedback, testing, and independent verification. Finished code is not the same as a trustworthy product.",
     iterateQuote: "Completion ≠ evidence.",
     workflowLabel: "AI in my workflow",
-    workflowTitle: "How AI fits into my work and daily life.",
+    workflowTitle: "<span>How AI fits</span> <span>into my work and daily life.</span>",
     workflowLead: "I prefer to start from real use: identify what is repetitive or frustrating, then decide exactly where AI should help.",
     developmentLabel: "01 · Product development",
-    developmentTitle: "AI-assisted Development Workflow",
+    developmentTitle: "<span>AI-assisted</span> <span>Development</span> <span>Workflow</span>",
     developmentCopy1: "After building several real apps, I gradually formed a Human + Agent development workflow that fits me better: I own product, architecture, design, and key decisions; agents handle implementation, checks, testing, and repetitive execution.",
     developmentCopy2: "Later, I turned the stable, repeatedly useful parts into App Development Skills.",
     skillsLink: "App Development Skills on GitHub ↗",
-    diagramHint: "Swipe horizontally to see the full workflow ↔",
     ideaCaseLabel: "02 · Personal workflow",
-    ideaTitle: "Feishu Idea Inbox",
+    ideaTitle: "<span>Feishu</span> <span>Idea Inbox</span>",
     ideaSummary: "Use Feishu Minutes to capture ideas with almost no friction, then let AI help organize, resurface, and continue the conversation.",
     ideaWhatLabel: "What",
     ideaWhat: "A personal idea workflow built around Feishu Minutes: voice capture, clean/structured versions, mind maps, AI Take, and periodic review.",
@@ -194,18 +225,19 @@ const COPY = {
     trackMeta: "viki006 · 30s preview",
     artistHomepages: "Artist homepages",
     videoLabel: "AI Video",
-    videoTitle: "AI has also become part of my video workflow.",
+    videoTitle: "<span>AI has also become</span> <span>part of my video</span> <span>workflow.</span>",
     videoCopy: "I’ve used character/persona design, storyboards, prompting, Flow, and AI-assisted editing. More importantly, I keep testing which parts are genuinely better with AI and when doing it myself is actually faster.",
     videoFallback: "Your browser cannot play this video.",
     aboutLabel: "About Me",
-    aboutTitle: "Product-minded<br>Engineer & Maker.",
+    aboutTitle: "<span>Product-minded</span><br><span>Engineer</span> <span>&amp; Maker.</span>",
     aboutCopy1: "I have several years of software engineering experience, but what I’m most interested in is not simply turning requirements into code. It is noticing problems, deciding what is worth making, simplifying the experience, and making it real.",
     aboutCopy2: "AI is now part of how I make things too. Some products genuinely need AI, such as Video Learning Moments; in other cases, agents act more like development partners that help me research, build, test, and verify faster. I care more about when AI is truly useful than about turning every product into an “AI product.”",
     aboutCopy3: "Beyond software, I also keep making music, video, and other creative work. I don’t see them as separate identities, but as the same way of observing, judging, and making expressed through different media.",
-    manifesto: "I notice things. I make things.",
+    manifesto: "<span>I notice things.</span> <span>I make things.</span>",
     secondarySkills: "Secondary skills",
     backTop: "Back to top ↑",
     footerBig: "Product × AI × Making.",
+    vlmScreenshotAlt: "Video Learning Moments interface showing captured learning moments and AI follow-up questions",
     ideaAlt: "Feishu Idea Inbox Recent Ideas screen showing the nine latest captured ideas",
     picpopDeviceAlt: "Real PicPop product preview on a phone",
     pictidyDeviceAlt: "Real Pictidy product preview on a phone",
@@ -244,10 +276,32 @@ function updateAudioLabels() {
 }
 
 function applyLanguage(language, preservePosition = false) {
-  const anchor = preservePosition
-    ? document.elementFromPoint(window.innerWidth / 2, window.innerHeight / 2)?.closest("section, article")
+  const viewportAnchor = preservePosition
+    ? [...document.querySelectorAll("main section[id]")].find((section) => {
+      const rect = section.getBoundingClientRect();
+      return rect.top <= window.innerHeight * 0.42 && rect.bottom > window.innerHeight * 0.42;
+    }) || document.elementFromPoint(window.innerWidth / 2, window.innerHeight * 0.42)?.closest("section[id]")
     : null;
-  const previousTop = anchor?.getBoundingClientRect().top ?? 0;
+  const savedScrollY = window.scrollY;
+  const anchorRect = viewportAnchor?.getBoundingClientRect();
+  const anchorPosition = viewportAnchor && anchorRect ? {
+    sectionId: viewportAnchor.id,
+    viewportTop: anchorRect.top,
+    documentTop: savedScrollY + anchorRect.top
+  } : null;
+  const temporaryStyles = anchorPosition ? [
+    [document.documentElement, "scroll-behavior"],
+    [document.documentElement, "overflow-anchor"],
+    [document.body, "overflow-anchor"]
+  ].map(([element, property]) => ({
+    element,
+    property,
+    value: element.style.getPropertyValue(property),
+    priority: element.style.getPropertyPriority(property)
+  })) : [];
+  temporaryStyles.forEach(({ element, property }) => {
+    element.style.setProperty(property, property === "overflow-anchor" ? "none" : "auto", "important");
+  });
 
   currentLanguage = language === "en" ? "en" : "zh";
   const content = COPY[currentLanguage];
@@ -265,9 +319,17 @@ function applyLanguage(language, preservePosition = false) {
     const value = content[element.dataset.altKey];
     if (typeof value === "string") element.alt = value;
   });
+  document.querySelectorAll("[data-i18n-aria-label]").forEach((element) => {
+    const value = content[element.dataset.i18nAriaLabel];
+    if (typeof value === "string") element.setAttribute("aria-label", value);
+  });
 
   const switchButton = document.getElementById("languageSwitch");
   const switchingToEnglish = currentLanguage === "zh";
+  const menuButton = document.getElementById("menuToggle");
+  const menuExpanded = menuButton.getAttribute("aria-expanded") === "true";
+  menuButton.textContent = content[menuExpanded ? "menuClose" : "menuOpen"];
+  menuButton.setAttribute("aria-label", content[menuExpanded ? "menuClose" : "menuOpen"]);
   switchButton.textContent = switchingToEnglish ? "EN" : "中文";
   switchButton.setAttribute("aria-label", switchingToEnglish ? "Switch to English" : "切换到中文");
 
@@ -283,9 +345,68 @@ function applyLanguage(language, preservePosition = false) {
   updateAudioLabels();
   saveLanguage(currentLanguage);
 
-  if (anchor) {
-    const currentTop = anchor.getBoundingClientRect().top;
-    window.scrollBy(0, currentTop - previousTop);
+  if (anchorPosition) {
+    let userInterrupted = false;
+    let restoreFinished = false;
+    const interruptOnInput = () => { userInterrupted = true; };
+    const interruptOnKey = (event) => {
+      if (["ArrowUp", "ArrowDown", "PageUp", "PageDown", "Home", "End", " "].includes(event.key)) {
+        userInterrupted = true;
+      }
+    };
+    const finishRestore = (lastAlignment = false) => {
+      if (restoreFinished) return;
+      if (lastAlignment) alignSemanticAnchor();
+      restoreFinished = true;
+      clearTimeout(safetyTimer);
+      window.removeEventListener("wheel", interruptOnInput, true);
+      window.removeEventListener("touchstart", interruptOnInput, true);
+      window.removeEventListener("pointerdown", interruptOnInput, true);
+      window.removeEventListener("keydown", interruptOnKey, true);
+      temporaryStyles.forEach(({ element, property, value, priority }) => {
+        if (value) element.style.setProperty(property, value, priority);
+        else element.style.removeProperty(property);
+      });
+    };
+    const alignSemanticAnchor = () => {
+      if (restoreFinished || userInterrupted || !viewportAnchor.isConnected) return;
+      const currentTop = viewportAnchor.getBoundingClientRect().top;
+      const currentDocumentTop = window.scrollY + currentTop;
+      const documentShift = currentDocumentTop - anchorPosition.documentTop;
+      const targetScrollY = Math.max(0, savedScrollY + documentShift);
+      if (Math.abs(currentTop - anchorPosition.viewportTop) > 0.5) {
+        window.scrollTo({ top: targetScrollY, behavior: "auto" });
+      }
+    };
+    window.addEventListener("wheel", interruptOnInput, true);
+    window.addEventListener("touchstart", interruptOnInput, { capture: true, passive: true });
+    window.addEventListener("pointerdown", interruptOnInput, true);
+    window.addEventListener("keydown", interruptOnKey, true);
+    const safetyTimer = window.setTimeout(() => finishRestore(true), 500);
+
+    // Force the translated layout now; background tabs may heavily throttle animation frames.
+    viewportAnchor.getBoundingClientRect();
+    window.ScrollTrigger?.refresh();
+    alignSemanticAnchor();
+    if (viewportAnchor.isConnected) {
+      navigationLinks.forEach((link) => {
+        if (link.getAttribute("href") === `#${anchorPosition.sectionId}`) link.setAttribute("aria-current", "location");
+        else link.removeAttribute("aria-current");
+      });
+    }
+    requestAnimationFrame(() => {
+      alignSemanticAnchor();
+      requestAnimationFrame(() => {
+        alignSemanticAnchor();
+        if (!userInterrupted && viewportAnchor.isConnected) {
+          navigationLinks.forEach((link) => {
+            if (link.getAttribute("href") === `#${anchorPosition.sectionId}`) link.setAttribute("aria-current", "location");
+            else link.removeAttribute("aria-current");
+          });
+        }
+        finishRestore();
+      });
+    });
   }
 }
 
@@ -353,6 +474,33 @@ document.getElementById("languageSwitch").addEventListener("click", () => {
   applyLanguage(currentLanguage === "zh" ? "en" : "zh", true);
 });
 
+const menuToggle = document.getElementById("menuToggle");
+const siteNav = document.getElementById("siteNav");
+function setMenuOpen(isOpen, restoreFocus = false) {
+  menuToggle.setAttribute("aria-expanded", String(isOpen));
+  menuToggle.textContent = COPY[currentLanguage][isOpen ? "menuClose" : "menuOpen"];
+  menuToggle.setAttribute("aria-label", COPY[currentLanguage][isOpen ? "menuClose" : "menuOpen"]);
+  siteNav.classList.toggle("is-open", isOpen);
+  if (restoreFocus) menuToggle.focus();
+}
+menuToggle.addEventListener("click", () => setMenuOpen(menuToggle.getAttribute("aria-expanded") !== "true"));
+const mobileNavigation = window.matchMedia("(max-width: 760px)");
+mobileNavigation.addEventListener("change", ({ matches }) => {
+  if (matches) return;
+  const focusWasOnToggle = document.activeElement === menuToggle;
+  setMenuOpen(false);
+  if (focusWasOnToggle) siteNav.querySelector("a")?.focus();
+});
+siteNav.addEventListener("click", (event) => {
+  if (event.target.closest("a")) setMenuOpen(false);
+});
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape" && menuToggle.getAttribute("aria-expanded") === "true") setMenuOpen(false, true);
+});
+document.addEventListener("click", (event) => {
+  if (menuToggle.getAttribute("aria-expanded") === "true" && !event.target.closest(".site-header")) setMenuOpen(false);
+});
+
 let activeAudio = null;
 let activeButton = null;
 
@@ -380,12 +528,22 @@ document.querySelectorAll(".track-play").forEach((button) => {
     activeAudio = audio;
     activeButton = button;
 
+    const errorMessage = document.getElementById(button.dataset.errorId);
+    if (errorMessage) errorMessage.hidden = true;
+    if (audio.error) audio.load();
     try {
       await audio.play();
       setAudioButtonState(button, true);
     } catch {
       setAudioButtonState(button, false);
+      if (errorMessage) errorMessage.hidden = false;
     }
+  });
+
+  audio.addEventListener("error", () => {
+    const errorMessage = document.getElementById(button.dataset.errorId);
+    if (errorMessage) errorMessage.hidden = false;
+    setAudioButtonState(button, false);
   });
 
   audio.addEventListener("pause", () => {
@@ -493,11 +651,13 @@ function initGsapMotion() {
   const mm = gsap.matchMedia();
   mm.add({
     desktop: "(min-width: 761px)",
+    mobile: "(max-width: 760px)",
     reduceMotion: "(prefers-reduced-motion: reduce)"
   }, (context) => {
-    const { desktop, reduceMotion: contextReducedMotion } = context.conditions;
-    if (contextReducedMotion) {
-      gsap.set(targets, { autoAlpha: 1, clearProps: "transform" });
+    const { desktop, mobile, reduceMotion: contextReducedMotion } = context.conditions;
+    const processPanels = [...document.querySelectorAll("[data-process-panel]")];
+    if (contextReducedMotion || mobile) {
+      gsap.set([...targets, ...processPanels], { autoAlpha: 1, clearProps: "transform" });
       return;
     }
 
@@ -534,8 +694,6 @@ function initGsapMotion() {
     } else {
       gsap.to(scrollTargets, { autoAlpha: 1, y: 0, duration: 0.5, stagger: 0.06, ease: "power2.out" });
     }
-
-    const processPanels = [...document.querySelectorAll("[data-process-panel]")];
 
     if (processPanels.length) {
       if (desktop && ScrollTrigger) {
